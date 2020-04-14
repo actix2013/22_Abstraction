@@ -1,5 +1,5 @@
 <?php
-require_once "HighWay.php";
+require_once "abstractHighWay.php";
 
 
 final class  PedestrianWay extends HightWay {

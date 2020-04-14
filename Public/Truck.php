@@ -28,9 +28,9 @@ class Truck extends Vehicle{
 
     /**
      * @param mixed $storageCapacity
-     * @return MyTruck
+     * @return Truck
      */
-    public function setStorageCapacity($storageCapacity) : MyTruck
+    public function setStorageCapacity($storageCapacity) : Truck
     {
         if($storageCapacity>=0)$this->storageCapacity = $storageCapacity;
         else $this->storageCapacity = 0;
@@ -47,7 +47,7 @@ class Truck extends Vehicle{
 
     /**
      * @param int $charge
-     * @return MyTruck
+     * @return Truck
      */
     public function setCharge(int $charge): String
     {

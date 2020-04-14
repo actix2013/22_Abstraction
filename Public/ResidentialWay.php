@@ -1,9 +1,7 @@
 <?php
-require_once "HighWay.php";
+require_once "abstractHighWay.php";
 
 final class  ResidentialWay extends HightWay {
-
-
 
     /**
      * ResidentialWay constructor.
@@ -15,16 +13,17 @@ final class  ResidentialWay extends HightWay {
         parent::__construct($nbLane,$maxSpeed);
     }
 
+    /**
+     * accepte tout type de vehicule
+     * @param vehicle $vehicle
+     */
     public function addVehicule(vehicle $vehicle)
     {
-
-
             $add=false;
             if($vehicle instanceof  Vehicle){
                $add=true;
             }
             if($add) $this->currentVehicles[]=$vehicle;
-
     }
 }
 
