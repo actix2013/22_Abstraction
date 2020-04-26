@@ -1,6 +1,7 @@
 <?php
 $absolutePath= $_SERVER['DOCUMENT_ROOT'];
 require_once "vehicle.php";
+require_once "LightableInterface.php";
 
 class Car extends Vehicle implements LightableInterface
 {

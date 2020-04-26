@@ -3,15 +3,24 @@
 //require_once "PedestrianWay.php";
 //require_once "ResidentialWay.php";
 require_once  "Car.php";
-//require_once "Bicycle.php";
+require_once "Bicycle.php";
 
-
-// creation de l'objet car , par defaut le frain a main est enclencher , donc l'exeption throw levée .
 $cariolle=new Car("blue", 3, "Banana");
-var_dump($cariolle);
+$bike = new Bicycle("red", 2 );
+
+if($cariolle->switchOn()){echo " lumiere en marchee sur Cariole<br>";}
+if($cariolle->switchOff()){echo " lumiere est eteinte Cariole<br>";}
+
+$bike->setCurrentSpeed(5);
+if($bike->switchOn()){ echo " le velo roule a plus de 10km/h , lumiere en marche <br>"; }
+else {echo " le velo roule a moins de 10km/h , lumiere est eteinte <br>";}
+if(!$bike->switchOn()){ echo " la lumiere du  velo est eteinte <br>"; }
+$bike->setCurrentSpeed(25);
+if($bike->switchOn()){ echo " le velo roule a plus de 10km/h , lumiere en marche <br>"; }
 
 
-
+//region ################## Code challenges precedents #################################################################
+/*
 // surround du  block avec try  catch  , si  l'exception throw est levé , elle est intercepté et on modifie le brake pour ensuite afficher un message
 try {
     $cariolle->start();
@@ -22,8 +31,8 @@ try {
 }
 
 // var dump pour controle valeurde brake
-var_dump($cariolle);
 
+*/
 
 
 
@@ -51,3 +60,4 @@ $residentialWayOne->addVehicule($tuftuf);
 var_dump($residentialWayOne);
 
 */
+//endregion
