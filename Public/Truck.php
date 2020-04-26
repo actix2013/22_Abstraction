@@ -2,7 +2,7 @@
 $absolutePath= $_SERVER['DOCUMENT_ROOT'];
 require_once "vehicle.php";
 
-class Truck extends Vehicle{
+class Truck extends Vehicle implements LightableInterface {
 
     /*
      * @var capacité de stockage
@@ -74,4 +74,19 @@ class Truck extends Vehicle{
     }
 
 
+    /**
+     * @return bool
+     */
+    public function switchOn(): bool
+    {
+        // TODO: Implement switchOn() method.
+    }
+
+    /**
+     * @return bool
+     */
+    public function switchOff(): bool
+    {
+        // TODO: Implement switchOff() method.
+    }
 }

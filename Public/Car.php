@@ -2,10 +2,33 @@
 $absolutePath= $_SERVER['DOCUMENT_ROOT'];
 require_once "vehicle.php";
 
-class Car extends Vehicle
+class Car extends Vehicle implements LightableInterface
 {
-    private $hasParkBrake=true;
 
+
+
+    //region  Code du  pour le chalenge implementation
+    /**
+     * @return bool
+     */
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function switchOff(): bool
+    {
+        return false;
+    }
+    //endregion
+
+
+
+    //region Code de la fontion
+    private $hasParkBrake=true;
     /**
      * Car constructor.
      * @param string $color
@@ -46,6 +69,6 @@ class Car extends Vehicle
         $val=parent::start();
         return $val;
     }
-
+    //endregion
 
 }
